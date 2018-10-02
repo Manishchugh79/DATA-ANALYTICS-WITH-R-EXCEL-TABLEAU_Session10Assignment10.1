@@ -1,0 +1,61 @@
+﻿Session 10 – Correlations
+     Assignment - 1
+Contents
+
+  Introduction ..................................................................................................................................................... 2
+
+  Objective .......................................................................................................................................................... 2
+
+  Prerequisites .................................................................................................................................................... 2
+
+  Associated Data Files ....................................................................................................................................... 2
+
+  Problem Statement ......................................................................................................................................... 2
+
+  Expected Output .............................................................................................................................................. 3
+
+
+
+
+   Copyrights© 2017, AcadGild. All Rights Reserved                                                                                                                1
+   Introduction
+This assignment will help you to understand the key concepts learnt in this session.
+
+
+   Objective
+This assignment will test your skills on Correlations in R.
+
+
+   Prerequisites
+Not Applicable
+
+
+   Associated Data Files
+Not Applicable
+
+
+   Problem Statement
+Import dataset from the following link: AirQuality Data Set
+
+Perform the following written operations:
+1. Read the file in Zip format and get it into R.
+2. Create Univariate for all the columns.
+3. Check for missing values in all columns.
+4. Impute the missing values using appropriate methods.
+5. Create bi-variate analysis for all relationships.
+6. Test relevant hypothesis for valid relations.
+7. Create cross tabulations with derived variables.
+8. Check for trends and patterns in time series.
+9. Find out the most polluted time of the day and the name of the chemical compound.
+
+
+
+  Copyrights© 2017, AcadGild. All Rights Reserved                                      2
+   Expected Output
+Not Applicable
+
+
+
+
+  Copyrights© 2017, AcadGild. All Rights Reserved   3
+
