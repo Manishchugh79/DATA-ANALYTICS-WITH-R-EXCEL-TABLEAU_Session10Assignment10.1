@@ -210,11 +210,6 @@ Answer:
  3rd Qu.:8.000   3rd Qu.:23.0  
  Max.   :9.000   Max.   :31.0 
 
-> apply(airquality, 2, mean, na.rm=T)
-         X      Ozone    Solar.R       Wind       Temp      Month        Day 
- 77.000000  42.129310 185.931507   9.957516  77.882353   6.993464  15.803922 
-> 
-
 # one popular ways of Univariate Descriptive Analysis:
 > library(purrr)
 > library(tidyr)
@@ -248,6 +243,36 @@ hist(airquality$Day, prob=T)
  
     
 3. Check for missing values in all columns.
+Answer:
+> # Check for missing values in all columns
+> # use summary
+
+> summary(airquality)
+       X           Ozone       Solar.R           Wind             Temp      
+ Min.   :  1   23     : 6   Min.   :  7.0   Min.   : 1.700   Min.   :56.00  
+ 1st Qu.: 39   13     : 4   1st Qu.:115.8   1st Qu.: 7.400   1st Qu.:72.00  
+ Median : 77   14     : 4   Median :205.0   Median : 9.700   Median :79.00  
+ Mean   : 77   16     : 4   Mean   :185.9   Mean   : 9.958   Mean   :77.88  
+ 3rd Qu.:115   18     : 4   3rd Qu.:258.8   3rd Qu.:11.500   3rd Qu.:85.00  
+ Max.   :153   (Other):94   Max.   :334.0   Max.   :20.700   Max.   :97.00  
+               NA's   :37   NA's   :7                                       
+     Month            Day      
+ Min.   :5.000   Min.   : 1.0  
+ 1st Qu.:6.000   1st Qu.: 8.0  
+ Median :7.000   Median :16.0  
+ Mean   :6.993   Mean   :15.8  
+ 3rd Qu.:8.000   3rd Qu.:23.0  
+ Max.   :9.000   Max.   :31.0  
+
+> summary(airquality$Ozone)
+ Min. 1st Qu. Median 	Mean 	3rd Qu. Max. 	NA's
+ 1.00 18.00   31.50 	42.13 	63.25 	168.00 	37.00 
+
+> summary(airquality$Solar.R)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    7.0   115.8   205.0   185.9   258.8   334.0       7
+    
+    
 4. Impute the missing values using appropriate methods.
 5. Create bi-variate analysis for all relationships.
 6. Test relevant hypothesis for valid relations.
