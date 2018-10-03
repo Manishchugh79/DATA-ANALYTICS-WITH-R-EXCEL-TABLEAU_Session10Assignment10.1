@@ -236,6 +236,16 @@ Answer:
 
 Plot shown on GitHub ID: 
       DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session10Assignment10.1/10.1.2 Scatterplot for Univariate analysis of all columns in airquality.png
+      
+# We can also draw Histogram to show univariate for all columns in dataset airquality.csv
+par(mfrow=c(2,3))
+hist(airquality$Ozone, prob=T)
+hist(airquality$Solar.R, prob=T)
+hist(airquality$Wind, prob=T)
+hist(airquality$Temp, prob=T)
+hist(airquality$Month, prob=T)
+hist(airquality$Day, prob=T)   
+ 
     
 3. Check for missing values in all columns.
 4. Impute the missing values using appropriate methods.
