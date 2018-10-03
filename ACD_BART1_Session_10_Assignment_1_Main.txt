@@ -584,6 +584,25 @@ Plot saved on github id:
       DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session10Assignment10.1/10.1.4 after imputing.png
 
 5. Create bi-variate analysis for all relationships.
+Answer:
+
+# showing bivariate analysys on 2 varibles - Ozone and temperature
+plot(airquality$Temp, airquality$Ozone, col="red", pch =19)
+path: DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session10Assignment10.1/10.1.5 bi-variate analysys on 2 variables.png
+    
+
+# bi-variate analysis using Pearson Correlation & Histogram Method
+library(psych)
+pairs.panels( airquality[,c(1,2,3,4,5,6,7)],
+              method = "pearson", # correlation method
+              hist.col = "blue",
+              density = TRUE,  # show density plots
+              ellipses = TRUE, # show correlation ellipses
+              lm=TRUE,
+              main ="Bivariate Analysys on airquality.csv using Pearson Correlation & Histogram Method"
+)
+Plot shown on github id: DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session10Assignment10.1/10.1.5 Bivariate analysys using Pearson Correlation & Histogram method.png
+
 6. Test relevant hypothesis for valid relations.
 7. Create cross tabulations with derived variables.
 8. Check for trends and patterns in time series.
