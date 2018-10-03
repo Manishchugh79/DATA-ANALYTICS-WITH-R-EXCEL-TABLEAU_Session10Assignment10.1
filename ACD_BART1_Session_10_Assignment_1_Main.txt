@@ -604,6 +604,67 @@ pairs.panels( airquality[,c(1,2,3,4,5,6,7)],
 Plot shown on github id: DATA-ANALYTICS-WITH-R-EXCEL-TABLEAU_Session10Assignment10.1/10.1.5 Bivariate analysys using Pearson Correlation & Histogram method.png
 
 6. Test relevant hypothesis for valid relations.
+
+Answer: 
+# we will use paired test analysis on Ozone, Solar.R, Wind, Temp and apply null hypothesis theory
+# Ho: Mean of first variable - Mean of 2 variable is equal to 0
+# Ha: Mean of first variable - Mean of 2 variable is not equal to 0
+
+> t.test(x=airquality$Ozone, y=airquality$Solar.R ,alternative = "two.sided",mu=0 ,paired = TRUE)
+
+	Paired t-test
+
+data:  airquality$Ozone and airquality$Solar.R
+t = -17.593, df = 110, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -158.7772 -126.6282
+sample estimates:
+mean of the differences 
+              -142.7027 
+
+> t.test(x=airquality$Temp, y=airquality$Wind ,alternative = "two.sided",mu=0 ,paired = TRUE)
+
+	Paired t-test
+
+data:  airquality$Temp and airquality$Wind
+t = 72.978, df = 152, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 66.08593 69.76374
+sample estimates:
+mean of the differences 
+               67.92484 
+
+> t.test(x=airquality$Ozone, y=airquality$Temp ,alternative = "two.sided",mu=0 ,paired = TRUE)
+
+	Paired t-test
+
+data:  airquality$Ozone and airquality$Temp
+t = -14.14, df = 115, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -40.74819 -30.73457
+sample estimates:
+mean of the differences 
+              -35.74138 
+
+> t.test(x=airquality$Day, y=airquality$Solar.R ,alternative = "two.sided",mu=0 ,paired = TRUE)
+
+	Paired t-test
+
+data:  airquality$Day and airquality$Solar.R
+t = -22.353, df = 145, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -184.8230 -154.7934
+sample estimates:
+mean of the differences 
+              -169.8082 
+
+> 
+# since p value of this test is <0.05 we reject the null hypothesis and accept the alternative hypothesis Ha
+
 7. Create cross tabulations with derived variables.
 8. Check for trends and patterns in time series.
 9. Find out the most polluted time of the day and the name of the chemical compound.
